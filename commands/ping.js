@@ -4,7 +4,7 @@ module.exports={
 
     async execute(client, interaction) {
 
-        await interaction.reply('Pong!');
+        await interaction.reply('Pong!!');
 
     }
     // data: new SlashCommandBuilder().setName('embed').setDescription('embed'),
