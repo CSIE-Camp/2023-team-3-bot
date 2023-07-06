@@ -13,11 +13,35 @@ module.exports = {
         const data = fs.readFileSync("bank.json");
         let bank = JSON.parse(data);
     
-        
         let playerid = interaction.options.getString("playerid");
+        // remove first two char and last char in playerid 
+        // <@338152155619786753> to 338152155619786753
+        playerid = playerid.substring(2, playerid.length - 1);
         let coin = interaction.options.getNumber("coin");
 
-        if(`$isAdmin[interaction.user.id]` == true){
+        // find player index in bank with playerid
+        let found = 0;
+        for (let i = 0; i < bank.length; i++) {
+            if (bank[i].ID == playerid) {
+                found = 1;
+                break;
+            }
+        }
+        if (found == 0) {
+            interaction.reply("找不到玩家");
+            return;
+        }
+        // check if user is admin
+
+        let playerIndex = -1;
+        for (let i = 0; i < bank.length; i++) {
+            if (bank[i].ID == interaction.user.id) {
+                playerIndex = i;
+                break;
+            }
+        }
+
+        if(bank[playerIndex].isAdmin == 1){
             let found = 0;
             for (let i = 0; i < bank.length; i++) {
                 if (bank[i].ID == playerid) {
@@ -26,9 +50,6 @@ module.exports = {
                     interaction.reply(`${bank[i].Username}的錢錢已修改為${bank[i].Coin}元`);
                     break;
                 }else{
-                    
-                   bank.push({ ID: interaction.user.id, bank: 10 });
-                 coinAmmount = 10;
                 } 
             }
         }else{
