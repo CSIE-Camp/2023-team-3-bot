@@ -1,12 +1,10 @@
-const {SlashCommandBuilder,EmbedBuilder}=require('discord.js')
-module.exports={
-    data: new SlashCommandBuilder().setName('ping').setDescription('Replies with pong!'),
+const { SlashCommandBuilder, EmbedBuilder } = require("discord.js");
+module.exports = {
+    data: new SlashCommandBuilder().setName("ping").setDescription("Replies with pong!"),
 
     async execute(client, interaction) {
-
-        await interaction.reply('Pong!!');
-
-    }
+        await interaction.reply("Pong!!");
+    },
     // data: new SlashCommandBuilder().setName('embed').setDescription('embed'),
     // async execute(client,interaction){
     //     const embed = new EmbedBuilder().setTitle('I\'m an Embed')
@@ -26,4 +24,4 @@ module.exports={
     //     ])
     //     interaction.reply({embeds:[embed]})
     // }
-}
+};
