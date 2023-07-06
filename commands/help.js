@@ -5,9 +5,9 @@ module.exports = {
         const help = new EmbedBuilder()
             .setTitle("C0in-Mast3r")
             .setColor("#FFC842")
-            .setDescription("這裡是 NTNU CISE CAMP 三眼怪星球做的 Discord Bot!")
+            .setDescription("這裡是 NTNU CISE CAMP 三眼怪星球做的 Discord Bot!\n 你可以在這裡查看 C0in-Mast3r 所有的功能!")
             .setImage(
-                "https://media0.giphy.com/media/N9SJ8eZZaHZQGDsneP/giphy.gif?cid=ecf05e47er7yxmcsd138me6e9ck9bkwf1je2wss6f20iawhw&ep=v1_gifs_search&rid=giphy.gif&ct=g",
+                "https://images.plurk.com/rmIc-1BCPk1VN0bCSqpZCh2HRiZ.gif",
             );
         interaction.reply({ embeds: [help] });
     },
