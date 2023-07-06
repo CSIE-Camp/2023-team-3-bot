@@ -1,5 +1,5 @@
-const { SlashCommandBuilder, EmbedBuilder } = require("discord.js");
-    
+const { SlashCommandBuilder, EmbedBuilder, Client, Embed } = require('discord.js');
+const fs = require('fs');
 module.exports = {
     
     async execute(client, interaction) {
