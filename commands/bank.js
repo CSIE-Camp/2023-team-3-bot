@@ -10,22 +10,21 @@ module.exports = {
         let bank = JSON.parse(data);
     
         let found = false;
-        let coinAmmount = 0;
+        let embed = new EmbedBuilder()
+                        .setColor("#FFC842");
         for (let i = 0; i < bank.length; i++) {
             if (bank[i].ID == interaction.user.id) {
                 found = true;
                 coinAmmount = bank[i].Coin
+                embed.setTitle("Your Bank")
+                     .setDescription(`Your coin: ${bank[i].Coin}`);
+                continue;
             }
         };
         if (found == false) {
-            bank.push({ ID: interaction.user.id, bank: 10 });
-            coinAmmount = 10;
+            embed.setTitle("U hav no Bank account :(")
+                 .setDescription("U can use /signup to create one!");
         }
-
-        const embed = new EmbedBuilder()
-            .setTitle("Your Bank")
-            .setColor("#ffffff")
-            .setDescription(`Your coin: ${coinAmmount}`);
         
         interaction.reply({ embeds: [embed] });
         const json = JSON.stringify(bank);
