@@ -10,5 +10,16 @@ module.exports = {
                 "https://images.plurk.com/rmIc-1BCPk1VN0bCSqpZCh2HRiZ.gif",
             );
         interaction.reply({ embeds: [help] });
+
+        const link = new ButtonBuilder()
+            .setStyle(ButtonStyle.Link)
+            .setCustomId('link')
+            .setURL('https://github.com/CSIE-Camp/C0in-Mast3r')
+            .setLabel('點我查看所有功能！');
+        
+        const collectLink = interaction.channel.createMessageComponentCollector({ time: 60000 });
+        console.log(collected);
+                
+
     },
 };
