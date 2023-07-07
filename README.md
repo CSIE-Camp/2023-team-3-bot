@@ -16,6 +16,7 @@ C0in Mast3r 是一個非常有趣和多功能的 Discord bot，可以讓你在 D
 心動不如行動，快來加入 C0in Mast3r 的大家庭吧！
 
 ## 怎麼使用 C0in Mast3r?
+
 ```
 指令： /help
 目的： 列出所有指令
