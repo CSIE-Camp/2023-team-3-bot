@@ -14,13 +14,7 @@ module.exports = {
               return 1;
             }
           });
-        
-        for (let i = 0; i < bank.length; i++) {
-            if (bank[i].ID == playerid) {
-                found = 1;
-                break;
-            }
-        }
+     
         if(bank.length >5 ){
             for (let k = 0; k < 5; k++) {
             interaction.reply(`第k+1名：${bank[k].Username}的財富為${bank[k].Coin}元`);
