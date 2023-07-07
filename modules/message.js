@@ -30,4 +30,4 @@ function msgAddCount(playerid) {
 
 module.exports = {
     msgAddCount,
-}
+};

@@ -18,9 +18,7 @@ module.exports = {
             }
         }
         if (found == false) {
-            embed
-                .setTitle("你還沒有帳戶哦！ :(")
-                .setDescription("你可以使用 /signup 創建帳戶！");
+            embed.setTitle("你還沒有帳戶哦！ :(").setDescription("你可以使用 /signup 創建帳戶！");
         }
 
         interaction.reply({ embeds: [embed] });
