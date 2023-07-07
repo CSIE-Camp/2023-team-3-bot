@@ -21,7 +21,7 @@ client.on("messageCreate", async (message) => {
     }
     // console.log(message);
 
-    msgAddCount(message.author.id);
+    msgAddCount(message);
 
     console.log(
         `在 ${message.guild.name} > ${message.channel.name} 收到來自 ${message.member.displayName} 的訊息：${message.content}`,

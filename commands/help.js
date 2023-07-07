@@ -2,7 +2,9 @@ const { SlashCommandBuilder, EmbedBuilder, ButtonBuilder, ButtonStyle } = requir
 const { ActionRowBuilder } = require("discord.js");
 
 module.exports = {
-    data: new SlashCommandBuilder().setName("help").setDescription("讓我告訴你 C0in Mast3r 的使用方法吧!"),
+    data: new SlashCommandBuilder()
+        .setName("help")
+        .setDescription("讓我告訴你 C0in Mast3r 的使用方法吧!"),
     async execute(client, interaction) {
         const help = new EmbedBuilder()
             .setTitle("C0in-Mast3r")

@@ -19,9 +19,7 @@ module.exports = {
         for (let i = 0; i < bank.length; i++) {
             if (bank[i].ID == interaction.user.id) {
                 found = true;
-                await interaction.reply(
-                    `你已經有一個叫做 "${bank[i].Username}" 的銀行帳號囉! :(`,
-                );
+                await interaction.reply(`你已經有一個叫做 "${bank[i].Username}" 的銀行帳號囉! :(`);
                 return;
             }
         }
@@ -36,19 +34,23 @@ module.exports = {
             Username: interaction.options.getString("username"),
             Coin: 10,
             isAdmin: 0,
-            Emali: "",
+            LatestDailyDate: date_ob,
             LatestMsgTime: date_ob,
             MsgCount: 0,
         };
         bank.push(newBlayer);
 
-        let embed = new EmbedBuilder().setColor("#FFC842").setTitle("已成功為你創建銀行帳戶!")
-            .setDescription(`Your Coin: ${newBlayer.Coin}\n`+
-                            `Your Username: ${newBlayer.Username}\n`+
-                            `isAdmin: ${newBlayer.isAdmin}\n`+
-                            `Emali: ${newBlayer.Emali}\n`+
-                            `Your LatestMsgTime: ${newBlayer.LatestMsgTime}\n`+
-                            `Your MsgCount: ${newBlayer.MsgCount}\n`);
+        let embed = new EmbedBuilder()
+            .setColor("#FFC842")
+            .setTitle("已成功為你創建銀行帳戶!")
+            .setDescription(
+                `Your Coin: ${newBlayer.Coin}\n` +
+                    `Your Username: ${newBlayer.Username}\n` +
+                    `isAdmin: ${newBlayer.isAdmin}\n` +
+                    `Your LatestDailyDate: ${newBlayer.LatestDailyDate}\n` +
+                    `Your LatestMsgTime: ${newBlayer.LatestMsgTime}\n` +
+                    `Your MsgCount: ${newBlayer.MsgCount}\n`,
+            );
 
         interaction.reply({ embeds: [embed] });
         const json = JSON.stringify(bank);

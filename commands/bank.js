@@ -18,9 +18,7 @@ module.exports = {
             }
         }
         if (found == false) {
-            embed
-                .setTitle("你沒有銀行帳戶呢 :(")
-                .setDescription("試試 /signup 創立銀行帳戶!");
+            embed.setTitle("你沒有銀行帳戶呢 :(").setDescription("試試 /signup 創立銀行帳戶!");
         }
 
         interaction.reply({ embeds: [embed] });
