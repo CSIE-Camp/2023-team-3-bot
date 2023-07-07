@@ -2,23 +2,43 @@ const { SlashcleBuilder, EmbedBuilder, SlashCommandBuilder, Client, Embed } = re
 const fs = require("fs");
 
 module.exports = {
-    data: new SlashCommandBuilder().setName("dice").setDescription("擲個骰子試試你的運氣吧!"),
+    data: new SlashCommandBuilder().setName("dice").setDescription("hihiih"),
     async execute(client, interaction) {
         let dice = Math.floor(Math.random() * 6) + 1;
-        let earnings = dice > 4 ? dice : dice - 4;
+        let earnings = 0;
+        if (dice == 1){
+            earnings = -10;
+        }
+        if (dice == 2){
+            earnings = -6;
+        } 
+        if (dice == 3){
+            earnings = -2;
+        }
+        if (dice == 4){
+            earnings = 2;
+        }
+        if (dice == 5){
+            earnings = 6;
+        }
+        if (dice == 6){
+            earnings = 10;
+        }
+
         const jsonDataIn = fs.readFileSync("bank.json");
         let bank = JSON.parse(jsonDataIn);
+       
         let found = 0;
         let ammount = 0;
         for (let i = 0; i < bank.length; i++) {
             if (bank[i].ID === interaction.user.id) {
-                if (earnings) bank[i].Coin += earnings;
+                bank[i].Coin += earnings;
                 ammount = bank[i].Coin;
                 found = 1;
                 let diceEmbed = new EmbedBuilder()
                     .setColor("#353535")
-                    .setTitle(`你贏下了 ${earnings} 枚金幣!`)
-                    .setDescription(`你目前有 ${ammount} 枚金幣!`);
+                    .setTitle(`You win ${earnings}!`)
+                    .setDescription(`You have ${ammount} now!`);
                 interaction.reply({ embeds: [diceEmbed] });
                 break;
             }
@@ -33,6 +53,6 @@ module.exports = {
         //stringify bank 並存回 bank.json
         const jsonDataOut = JSON.stringify(bank);
         fs.writeFileSync("bank.json", jsonDataOut);
-        await interaction.reply(`add ${earnings} ammount : ${ammount}`);
+     
     },
 };
