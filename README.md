@@ -1,8 +1,11 @@
 # C0in Mast3r - 經濟系統的最佳選擇
-![C0in Mast3r png](https://cdn.discordapp.com/avatars/1125659578114256916/50312c2da07db3ef5d9b756b524d37fc.png?size=2048&quality=lossless
-)
+
+![C0in Mast3r png](https://cdn.discordapp.com/avatars/1125659578114256916/50312c2da07db3ef5d9b756b524d37fc.png?size=2048&quality=lossless)
+
 ### 由 NTNU CSIE camp 2023 三眼怪星球製作
+
 ## 為什麼要使用 C0in Mast3r?
+
 C0in Mast3r 是一個非常有趣和多功能的 Discord bot，可以讓你在 Discord 上享受更多的樂趣和挑戰。
 
 也可以幫助你增加你的社交互動和活躍度，並讓你的 Discord 伺服器更加生動和有吸引力。
@@ -27,11 +30,12 @@ C0in Mast3r 是一個非常有趣和多功能的 Discord bot，可以讓你在 D
 ```
 
 ```
-指令： /bank, /money
+指令： /bank
 目的： 顯示使用者金錢數量
-限制： 僅能顯示自己得錢包
+限制： 僅能顯示自己的錢包
 輸出： 包含顯示金幣的 embed
 ```
+
 ```
 指令： /pay [使用者id] [錢錢數量]
 目的： 能夠付錢給其他使用者
@@ -40,7 +44,7 @@ C0in Mast3r 是一個非常有趣和多功能的 Discord bot，可以讓你在 D
 ```
 
 ```
-指令： /janken 
+指令： /janken
 目的： 與其他機器人玩猜拳
 限制： -
 輸出： 獲勝+10 獲敗-10
@@ -59,7 +63,6 @@ C0in Mast3r 是一個非常有趣和多功能的 Discord bot，可以讓你在 D
 輸出： 更改成功、更改失敗
 ```
 
-
 製作者名單:
 [@Chuxin](https://github.com/chuxin3310)
 [@Langmao Tw. 浪貓](https://github.com/langmaola)
@@ -72,4 +75,5 @@ C0in Mast3r 是一個非常有趣和多功能的 Discord bot，可以讓你在 D
 
 協助者名單:
 [@SkyHong](https://github.com/skyhong2002)
+
 > Gernerated from [NTNU CSIE camp 2023 - DiscordBot](https://github.com/CSIE-Camp/discord-bot-template)

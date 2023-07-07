@@ -1,6 +1,6 @@
-const { SlashCommandBuilder, EmbedBuilder, ButtonBuilder, ButtonStyle } = require('discord.js');
-// const { SlashCommandBuilder, EmbedBuilder} = require("discord.js");
-// const { MessageActionRow, MessageButton} = require('discord.js');
+const { SlashCommandBuilder, EmbedBuilder, ButtonBuilder, ButtonStyle } = require("discord.js");
+const { ActionRowBuilder } = require("discord.js");
+
 module.exports = {
     data: new SlashCommandBuilder().setName("help").setDescription("讓我告訴你 C0in Mast3r 的使用方法吧!"),
     async execute(client, interaction) {
@@ -12,31 +12,13 @@ module.exports = {
             )
             .setImage("https://images.plurk.com/rmIc-1BCPk1VN0bCSqpZCh2HRiZ.gif");
 
-            interaction.reply({ embeds: [help] });
+        const LinkButton = new ButtonBuilder()
+            .setLabel("點我查看所有功能！")
+            .setURL("https://github.com/CSIE-Camp/C0in-Mast3r")
+            .setStyle(ButtonStyle.Link);
 
-        // const link = new ButtonBuilder()
-        //     .setStyle(ButtonStyle.Link)
-        //     .setCustomId('link')
-        //     .setURL('https://github.com/CSIE-Camp/C0in-Mast3r')
-        //     .setLabel('點我查看所有功能！');
+        const row = new ActionRowBuilder().addComponents(LinkButton);
 
-        const scissorButton = new ButtonBuilder()
-            .setCustomId('scissors')
-            .setLabel('剪刀!')
-            .setEmoji('✌️')
-            .setStyle(ButtonStyle.Primary);
-
-        // const LinkButton = new ButtonBuilder()
-        //     // .addComponents(
-        //     // new ButtonBuilder()
-        //         .setLabel('點我查看所有功能！')
-        //         .setCustomId('link')
-        //         .setURL("https://github.com/CSIE-Camp/C0in-Mast3r")
-        //         .setStyle(ButtonStyle.Link);
-        
-        // const collectLink = interaction.channel.createMessageComponentCollector({ time: 60000 });
-        // console.log(collected);
-                
-
+        interaction.reply({ embeds: [help], components: [row] });
     },
 };

@@ -43,12 +43,12 @@ module.exports = {
         bank.push(newBlayer);
 
         let embed = new EmbedBuilder().setColor("#FFC842").setTitle("已成功為你創建銀行帳戶!")
-            .setDescription(`Your Coin: ${newBlayer.Coin}`+
-                            `Your Username: ${newBlayer.Username}`+
-                            `isAdmin: ${newBlayer.isAdmin}`+
-                            `Emali: ${newBlayer.Emali}`+
-                            `Your LatestMsgTime: ${newBlayer.LatestMsgTime}`+
-                            `Your MsgCount: ${newBlayer.MsgCount}`);
+            .setDescription(`Your Coin: ${newBlayer.Coin}\n`+
+                            `Your Username: ${newBlayer.Username}\n`+
+                            `isAdmin: ${newBlayer.isAdmin}\n`+
+                            `Emali: ${newBlayer.Emali}\n`+
+                            `Your LatestMsgTime: ${newBlayer.LatestMsgTime}\n`+
+                            `Your MsgCount: ${newBlayer.MsgCount}\n`);
 
         interaction.reply({ embeds: [embed] });
         const json = JSON.stringify(bank);
