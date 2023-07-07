@@ -3,18 +3,18 @@ const fs = require("fs");
 module.exports = {
     data: new SlashCommandBuilder()
         .setName("pay")
-        .setDescription("送人錢錢")
+        .setDescription("傳達你的祝福!")
         .addStringOption((option) =>
-            option.setName("player").setDescription("請 @ 玩家名").setRequired(true),
+            option.setName("player").setDescription("請 @ 使用者名稱!").setRequired(true),
         )
         .addNumberOption((option) =>
-            option.setName("coin").setDescription("請輸入送出金額").setRequired(true),
+            option.setName("coin").setDescription("請輸入送出金額!").setRequired(true),
         ),
 
     async execute(client, interaction) {
         // check coin is positive
         if (interaction.options.getNumber("coin") <= 0) {
-            interaction.reply("金額必須大於 0");
+            interaction.reply("你的金幣似乎不夠呢!");
             return;
         }
 
@@ -38,7 +38,7 @@ module.exports = {
             }
         }
         if (found == 0) {
-            interaction.reply("找不到玩家");
+            interaction.reply("找不到使用者!");
             return;
         }
 
@@ -53,13 +53,13 @@ module.exports = {
             }
         }
         if (found == 0) {
-            interaction.reply("找不到你的資料");
+            interaction.reply("找不到你的資料!");
             return;
         }
 
         // check if user has enough money
         if (bank[userIndex].Coin < coin) {
-            interaction.reply("你的錢不夠喔");
+            interaction.reply("你的金幣不夠呦!");
             return;
         }
 
@@ -73,8 +73,8 @@ module.exports = {
         // reply
 
         interaction.reply(
-            `已送達 ${bank[targetIndex].Username} 帳號 ${coin} 元\n` +
-                `您的 ${bank[userIndex].Username} 帳號剩餘 ${bank[userIndex].Coin} 元`,
+            `成功為你送達 ${bank[targetIndex].Username} 帳號 ${coin} 金幣了!\n` +
+                `你的 ${bank[userIndex].Username} 帳號剩餘 ${bank[userIndex].Coin} 金幣!`,
         );
 
         // for (let i = 0; i < bank.length; i++) {

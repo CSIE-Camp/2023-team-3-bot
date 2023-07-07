@@ -1,6 +1,6 @@
 const { SlashCommandBuilder, EmbedBuilder } = require("discord.js");
 module.exports = {
-    data: new SlashCommandBuilder().setName("ping").setDescription("Replies with pong!"),
+    data: new SlashCommandBuilder().setName("ping").setDescription("ping pong ping pong ping"),
 
     async execute(client, interaction) {
         await interaction.reply("Pong!!");

@@ -2,7 +2,7 @@ const { SlashcleBuilder, EmbedBuilder, SlashCommandBuilder, Client, Embed } = re
 const fs = require("fs");
 
 module.exports = {
-    data: new SlashCommandBuilder().setName("dice").setDescription("hihiih"),
+    data: new SlashCommandBuilder().setName("dice").setDescription("擲個骰子試試你的運氣吧!"),
     async execute(client, interaction) {
         let dice = Math.floor(Math.random() * 6) + 1;
         let earnings = dice > 4 ? dice : dice - 4;
@@ -17,8 +17,8 @@ module.exports = {
                 found = 1;
                 let diceEmbed = new EmbedBuilder()
                     .setColor("#353535")
-                    .setTitle(`You win ${earnings}!`)
-                    .setDescription(`You have ${ammount} now!`);
+                    .setTitle(`你贏下了 ${earnings} 枚金幣!`)
+                    .setDescription(`你目前有 ${ammount} 枚金幣!`);
                 interaction.reply({ embeds: [diceEmbed] });
                 break;
             }

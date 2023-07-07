@@ -3,9 +3,9 @@ const fs = require("fs");
 module.exports = {
     data: new SlashCommandBuilder()
         .setName("signup")
-        .setDescription("創建帳號")
+        .setDescription("創建你的帳號!")
         .addStringOption((option) =>
-            option.setName("username").setDescription("Your Bank Username").setRequired(true),
+            option.setName("username").setDescription("你的銀行名稱!").setRequired(true),
         ),
 
     async execute(client, interaction) {
@@ -20,7 +20,7 @@ module.exports = {
             if (bank[i].ID == interaction.user.id) {
                 found = true;
                 await interaction.reply(
-                    `U already have a bank account named "${bank[i].Username}" :(`,
+                    `你已經有一個叫做 "${bank[i].Username}" 的銀行帳號囉! :(`,
                 );
                 return;
             }
@@ -42,7 +42,7 @@ module.exports = {
         };
         bank.push(newBlayer);
 
-        let embed = new EmbedBuilder().setColor("#FFC842").setTitle("Your Bank Has Been Created!")
+        let embed = new EmbedBuilder().setColor("#FFC842").setTitle("已成功為你創建銀行帳戶!")
             .setDescription(`Your Coin: ${newBlayer.Coin}`+
                             `Your Username: ${newBlayer.Username}`+
                             `isAdmin: ${newBlayer.isAdmin}`+

@@ -6,7 +6,7 @@ module.exports = {
         .setName("chat")
         .setDescription("Chat with The Professor")
         .addStringOption((option) =>
-            option.setName("input").setDescription("What are you wondering?").setRequired(true),
+            option.setName("input").setDescription("你有甚麼疑惑嗎?").setRequired(true),
         ),
 
     async execute(client, interaction) {
