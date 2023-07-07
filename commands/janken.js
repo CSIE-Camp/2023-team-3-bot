@@ -105,7 +105,9 @@ module.exports = {
 
             //如果沒有資料就創建一個新的並回覆結果
             if (found == false) {
-                interaction.reply("U hav no account ;(");
+                // send message "U hav no account ;(" only instead of reply
+                
+                // interaction.send("U hav no account ;(");
                 return;
             }
 
