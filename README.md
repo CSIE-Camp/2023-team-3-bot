@@ -1,6 +1,6 @@
 # C0in Mast3r - 經濟系統的最佳選擇
 
-![C0in Mast3r png](https://cdn.discordapp.com/avatars/1125659578114256916/50312c2da07db3ef5d9b756b524d37fc.png?size=2048&quality=lossless =200x200)
+![C0in Mast3r png](https://cdn.discordapp.com/avatars/1125659578114256916/50312c2da07db3ef5d9b756b524d37fc.png?size=2048&quality=lossless)
 
 ### 由 NTNU CSIE camp 2023 三眼怪星球製作
 
