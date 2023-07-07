@@ -14,14 +14,6 @@ module.exports = {
               return 1;
             }
           });
-
-        
-        // remove first two char and last char in playerid
-        // <@338152155619786753> to 338152155619786753
-        playerid = playerid.substring(2, playerid.length - 1);
-        let coin = interaction.options.getNumber("coin");
-
-        // find player index in bank with playerid
         
         for (let i = 0; i < bank.length; i++) {
             if (bank[i].ID == playerid) {
