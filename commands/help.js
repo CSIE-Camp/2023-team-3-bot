@@ -11,7 +11,8 @@ module.exports = {
                 "這裡是 NTNU CISE CAMP 三眼怪星球做的 Discord Bot!\n 你可以在這裡查看 C0in-Mast3r 所有的功能!",
             )
             .setImage("https://images.plurk.com/rmIc-1BCPk1VN0bCSqpZCh2HRiZ.gif");
-        interaction.reply({ embeds: [help] });
+
+            interaction.reply({ embeds: [help] });
 
         // const link = new ButtonBuilder()
         //     .setStyle(ButtonStyle.Link)
@@ -19,13 +20,19 @@ module.exports = {
         //     .setURL('https://github.com/CSIE-Camp/C0in-Mast3r')
         //     .setLabel('點我查看所有功能！');
 
-        const LinkButton = new ButtonBuilder()
-            // .addComponents(
-            // new ButtonBuilder()
-                .setLabel('點我查看所有功能！')
-                .setCustomId('link')
-                .setURL("https://github.com/CSIE-Camp/C0in-Mast3r")
-                .setStyle(ButtonStyle.Link);
+        const scissorButton = new ButtonBuilder()
+            .setCustomId('scissors')
+            .setLabel('剪刀!')
+            .setEmoji('✌️')
+            .setStyle(ButtonStyle.Primary);
+
+        // const LinkButton = new ButtonBuilder()
+        //     // .addComponents(
+        //     // new ButtonBuilder()
+        //         .setLabel('點我查看所有功能！')
+        //         .setCustomId('link')
+        //         .setURL("https://github.com/CSIE-Camp/C0in-Mast3r")
+        //         .setStyle(ButtonStyle.Link);
         
         // const collectLink = interaction.channel.createMessageComponentCollector({ time: 60000 });
         // console.log(collected);

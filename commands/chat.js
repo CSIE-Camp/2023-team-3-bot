@@ -4,7 +4,7 @@ const { Configuration, OpenAIApi } = require("openai");
 module.exports = {
     data: new SlashCommandBuilder()
         .setName("chat")
-        .setDescription("Chat with The Professor")
+        .setDescription("和GPT開啟對話!")
         .addStringOption((option) =>
             option.setName("input").setDescription("你有甚麼疑惑嗎?").setRequired(true),
         ),
