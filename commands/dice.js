@@ -28,8 +28,8 @@ module.exports = {
         //如果沒有資料就創建一個新的並回覆結果
         if (!found) {
             newBlayer = { ID: interaction.user.id, Coin: earnings };
-            ammount = newBlayer.Coin;
-            bank.push(newBlayer);
+            ammount = newPlayer.Coin;
+            bank.push(newPlayer);
         }
         //stringify bank 並存回 bank.json
         await interaction.reply(`獲得 ${earnings}，共 : ${ammount}`);
