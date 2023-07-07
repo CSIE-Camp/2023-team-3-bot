@@ -76,6 +76,7 @@ C0in Mast3r 是一個非常有趣和多功能的 Discord bot，可以讓你在 D
 目的：和機率較勁以獲得貨幣
 限制： -
 輸出：贏下金額、餘額
+```
 
 製作者名單:
 [@Chuxin](https://github.com/chuxin3310)
