@@ -37,8 +37,8 @@ module.exports = {
                 found = 1;
                 let diceEmbed = new EmbedBuilder()
                     .setColor("#353535")
-                    .setTitle(`You win ${earnings}!`)
-                    .setDescription(`You have ${ammount} now!`);
+                    .setTitle(`你贏得了${earnings}元！`)
+                    .setDescription(`你現在共有${ammount}元！ `);
                 interaction.reply({ embeds: [diceEmbed] });
                 break;
             }
@@ -51,6 +51,7 @@ module.exports = {
             bank.push(newBlayer);
         }
         //stringify bank 並存回 bank.json
+        await interaction.reply(`獲得 ${earnings}，共 : ${ammount}`);
         const jsonDataOut = JSON.stringify(bank);
         fs.writeFileSync("bank.json", jsonDataOut);
      
