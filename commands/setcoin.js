@@ -5,7 +5,7 @@ module.exports = {
         .setName("setcoin")
         .setDescription("修改錢錢")
         .addStringOption((option) =>
-            option.setName("playerid").setDescription("請選擇玩家名").setRequired(true),
+            option.setName("player").setDescription("請選擇玩家名").setRequired(true),
         )
         .addNumberOption((option) =>
             option.setName("coin").setDescription("請輸入修改金額").setRequired(true),
@@ -15,7 +15,7 @@ module.exports = {
         const data = fs.readFileSync("bank.json");
         let bank = JSON.parse(data);
 
-        let playerid = interaction.options.getString("playerid");
+        let playerid = interaction.options.getString("player");
         // remove first two char and last char in playerid
         // <@338152155619786753> to 338152155619786753
         playerid = playerid.substring(2, playerid.length - 1);

@@ -12,7 +12,6 @@ module.exports = {
             return b.Coin - a.Coin;
         });
 
-
         // bank = bank.sort((a, b) => {
         //     if (a.Coin < b.Coin) {
         //         return 1;
@@ -22,7 +21,9 @@ module.exports = {
         let message = "";
         if (bank.length > 5) {
             for (let k = 0; k < 5; k++) {
-                message += `第 ${k + 1} 名：<@${bank[k].ID}> (${bank[k].Username}) 的財富為 ${bank[k].Coin} 元\n`;
+                message += `第 ${k + 1} 名：<@${bank[k].ID}> (${bank[k].Username}) 的財富為 ${
+                    bank[k].Coin
+                } 元\n`;
             }
             for (let i = 0; i < bank.length; i++) {
                 if (bank[i].ID == interaction.user.id) {
@@ -31,7 +32,9 @@ module.exports = {
             }
         } else {
             for (let k = 0; k < bank.length; k++) {
-                message += `第 ${k + 1}名：<@${bank[k].ID}> (${bank[k].Username}) 的財富為 ${bank[k].Coin} 元\n`;
+                message += `第 ${k + 1}名：<@${bank[k].ID}> (${bank[k].Username}) 的財富為 ${
+                    bank[k].Coin
+                } 元\n`;
             }
         }
         interaction.reply(message);

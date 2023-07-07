@@ -19,8 +19,15 @@ function msgAddCount(playerid) {
         return;
     }
 
-    bank[playerIndex].Count += 1;
+    bank[playerIndex].MsgCount += 1;
+    bank[playerIndex].Coin += 1;
+
+    // console.log(bank[playerIndex].ID, bank[playerIndex].MsgCount);
 
     const json = JSON.stringify(bank);
     fs.writeFileSync("bank.json", json);
+}
+
+module.exports = {
+    msgAddCount,
 }
