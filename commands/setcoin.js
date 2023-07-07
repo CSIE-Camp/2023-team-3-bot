@@ -3,12 +3,12 @@ const fs = require("fs");
 module.exports = {
     data: new SlashCommandBuilder()
         .setName("setcoin")
-        .setDescription("修改錢錢")
+        .setDescription("修改使用者金幣")
         .addStringOption((option) =>
             option.setName("player").setDescription("請選擇玩家名").setRequired(true),
         )
         .addNumberOption((option) =>
-            option.setName("coin").setDescription("請輸入修改金額").setRequired(true),
+            option.setName("coin").setDescription("請輸入修改金額!").setRequired(true),
         ),
 
     async execute(client, interaction) {
@@ -30,7 +30,7 @@ module.exports = {
             }
         }
         if (found == 0) {
-            interaction.reply("找不到玩家");
+            interaction.reply("找不到使用者!");
             return;
         }
         // check if user is admin
@@ -49,13 +49,13 @@ module.exports = {
                 if (bank[i].ID == playerid) {
                     found = 1;
                     bank[i].Coin = coin;
-                    interaction.reply(`${bank[i].Username}的錢錢已修改為${bank[i].Coin}元`);
+                    interaction.reply(`${bank[i].Username}的金幣已修改為${bank[i].Coin}元!`);
                     break;
                 } else {
                 }
             }
         } else {
-            interaction.reply("非常抱歉，您的權限不足");
+            interaction.reply("想幹嘛呢? 這可是管理員才能用呢!");
         }
         const json = JSON.stringify(bank);
         fs.writeFileSync("bank.json", json);

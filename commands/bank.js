@@ -13,12 +13,14 @@ module.exports = {
             if (bank[i].ID == interaction.user.id) {
                 found = true;
                 coinAmmount = bank[i].Coin;
-                embed.setTitle(`${ID}的銀行`).setDescription(`你的錢錢: ${bank[i].Coin}`);
+                embed.setTitle("銀行").setDescription(`你的存款: ${bank[i].Coin}`);
                 continue;
             }
         }
         if (found == false) {
-            embed.setTitle("你還沒有帳戶哦！ :(").setDescription("你可以使用 /signup 創建帳戶！");
+            embed
+                .setTitle("你沒有銀行帳戶呢 :(")
+                .setDescription("試試 /signup 創立銀行帳戶!");
         }
 
         interaction.reply({ embeds: [embed] });
