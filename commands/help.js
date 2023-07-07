@@ -1,5 +1,5 @@
 const { SlashCommandBuilder, EmbedBuilder, ButtonBuilder, ButtonStyle } = require("discord.js");
-const { MessageActionRow } = require("discord.js");
+const { ActionRowBuilder } = require("discord.js");
 
 module.exports = {
     data: new SlashCommandBuilder().setName("help").setDescription("help"),
@@ -14,11 +14,10 @@ module.exports = {
 
         const LinkButton = new ButtonBuilder()
             .setLabel("點我查看所有功能！")
-            .setCustomId("link")
             .setURL("https://github.com/CSIE-Camp/C0in-Mast3r")
             .setStyle(ButtonStyle.Link);
 
-        const row = new MessageActionRow().addComponents(LinkButton);
+        const row = new ActionRowBuilder().addComponents(LinkButton);
 
         interaction.reply({ embeds: [help], components: [row] });
     },
