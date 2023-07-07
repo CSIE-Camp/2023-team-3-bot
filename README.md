@@ -63,6 +63,26 @@ C0in Mast3r 是一個非常有趣和多功能的 Discord bot，可以讓你在 D
 輸出： 更改成功、更改失敗
 ```
 
+```
+指令： /rank
+目的： 查看財富排行榜
+限制： -
+輸出： 顯示全體用戶的財富跟排名
+```
+
+```
+指令： /chat
+目的：和GPT開啟對話
+限制： -
+輸出：GPT的回覆
+```
+
+```
+指令： /dice
+目的：骰骰子以獲得貨幣
+限制： -
+輸出：
+
 製作者名單:
 [@Chuxin](https://github.com/chuxin3310)
 [@Langmao Tw. 浪貓](https://github.com/langmaola)
