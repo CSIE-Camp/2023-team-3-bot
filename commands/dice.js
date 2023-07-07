@@ -12,7 +12,7 @@ module.exports = {
         let found = 0;
         let ammount = 0;
         for (let i = 0; i < bank.length; i++) {
-            if (bank[i].ID === interaction.user.id) {
+            if (bank[i].ID == interaction.user.id) {
                 bank[i].Coin += earnings;
                 ammount = bank[i].Coin;
                 found = 1;
