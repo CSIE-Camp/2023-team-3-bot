@@ -2,10 +2,10 @@ const { SlashcleBuilder, EmbedBuilder, SlashCommandBuilder, Client, Embed } = re
 const fs = require("fs");
 
 module.exports = {
-    data: new SlashCommandBuilder().setName("dice").setDescription("hihiih"),
+    data: new SlashCommandBuilder().setName("dice").setDescription("擲 1d6 骰子下賭注"),
     async execute(client, interaction) {
         let dice = Math.floor(Math.random() * 6) + 1;
-        let earnings = dice >= 4 ? dice - 3 : dice - 4;
+        let earnings = (dice >= 4 ? dice - 3 : dice - 4) * 2;
         const jsonDataIn = fs.readFileSync("bank.json");
         let bank = JSON.parse(jsonDataIn);
 
