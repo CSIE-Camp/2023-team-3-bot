@@ -8,11 +8,11 @@
 
 C0in Mast3r 是一個非常有趣和多功能的 Discord bot，可以讓你在 Discord 上享受更多的樂趣和挑戰。
 
-也可以幫助你增加你的社交互動和活躍度，並讓你的 Discord 伺服器更加生動和有吸引力。
+它可以幫助你增加社交互動和活躍度，並讓你的 Discord 伺服器更加生動和有吸引力。
 
 如果你想要體驗 C0in Mast3r 的魅力，只需要[點我](https://discord.com/api/oauth2/authorize?client_id=1125659578114256916&permissions=8&scope=bot)來邀請它到你的伺服器，然後輸入 /help 來查看它的所有指令和功能。
 
-不要猶豫了，快來加入 C0in Mast3r 的大家庭吧！
+心動不如行動，快來加入 C0in Mast3r 的大家庭吧！
 
 ## 怎麼使用 C0in Mast3r?
 ```
