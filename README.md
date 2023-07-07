@@ -11,7 +11,7 @@ C0in Mast3r 是一個非常有趣和多功能的 Discord bot，可以讓你在 D
 
 具體來說，它可以透過在伺服器上與人互動來獲得金幣，也能夠透過許多與機器人互動的小遊戲，嘗試獲得更多金錢的機會。其中，隨時可以透過 /bank 的功能查詢自己的餘額，也可以透過 /rank 的功能觀察排行榜，增加刺激性！
 
-如果你想要體驗 C0in Mast3r 的魅力，只需要[點我](https://discord.com/api/oauth2/authorize?client_id=1125659578114256916&permissions=8&scope=bot)來邀請它到你的伺服器，然後輸入 /help 來查看它的所有指令和功能。
+如果你想要體驗 C0in Mast3r 的魅力，只需要 [**點我**](https://discord.com/api/oauth2/authorize?client_id=1125659578114256916&permissions=8&scope=bot) 來邀請它到你的伺服器，然後輸入 /help 來查看它的所有指令和功能。
 
 心動不如行動，快來加入 C0in Mast3r 的大家庭吧！
 
