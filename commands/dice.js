@@ -5,26 +5,7 @@ module.exports = {
     data: new SlashCommandBuilder().setName("dice").setDescription("hihiih"),
     async execute(client, interaction) {
         let dice = Math.floor(Math.random() * 6) + 1;
-        let earnings = 0;
-        if (dice == 1){
-            earnings = -10;
-        }
-        if (dice == 2){
-            earnings = -6;
-        } 
-        if (dice == 3){
-            earnings = -2;
-        }
-        if (dice == 4){
-            earnings = 2;
-        }
-        if (dice == 5){
-            earnings = 6;
-        }
-        if (dice == 6){
-            earnings = 10;
-        }
-
+       let earnings = dice > 4 ? dice : dice - 4;
         const jsonDataIn = fs.readFileSync("bank.json");
         let bank = JSON.parse(jsonDataIn);
        
